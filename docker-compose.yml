@@ -1,0 +1,12 @@
+services:
+  fast:
+    build:
+      context: ./fastapi
+    image: fast-img:1
+
+  svel:
+    build:
+      context: ./svelte
+    image: svel-img:1
+    ports:
+    - '80:80'
