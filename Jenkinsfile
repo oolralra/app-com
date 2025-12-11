@@ -96,7 +96,7 @@ pipeline {
                 script {
                     sh "git config --global user.email ${GIT_EMAIL}"
                     sh "git config --global user.name ${GIT_NAME}"
-                    sh "sed -i 's@${AWS_ECR_URI}/${AWS_ECR_IMAGE_NAME}:.*@${AWS_ECR_URI}/${AWS_ECR_IMAGE_NAME}:${BUILD_NUMBER}@g' test-dep.yml"
+                    sh "sed -i 's@${AWS_ECR_URI}/${AWS_ECR_IMAGE_NAME}:.*@${AWS_ECR_URI}/${AWS_ECR_IMAGE_NAME}:${BUILD_NUMBER}@g' svel.yml"
 
                     sh "git add ."
                     sh "git branch -M main"
